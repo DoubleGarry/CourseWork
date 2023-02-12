@@ -4,7 +4,15 @@ public class Employee {
     private final String fullName;
     private int department;
     private int salary;
-    private static int id;
+    private final int id;
+    private static int count;
+
+    public Employee(String fullName, int department, int salary) {
+        this.fullName = fullName;
+        this.department = department;
+        this.salary = salary;
+        id = ++count;
+    }
 
     public String getFullName() {
         return fullName;
@@ -23,21 +31,13 @@ public class Employee {
         this.salary = salary;
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
-    }
-
-
-    public Employee(String fullName, int department, int salary) {
-        this.fullName = fullName;
-        this.department = department;
-        this.salary = salary;
-        id++;
     }
 
     @Override
     public String toString() {
-        return "Сотрудник - " + "ФИО: " + fullName +
-                '\'' + ", отдел: " + department + ", зарплата: " + salary + '}';
+        return "Сотрудник - ID:" +getId()+ " ФИО:" + getFullName() +
+                ", отдел: " + getDepartment() + ", зарплата: " + getSalary();
     }
 }
