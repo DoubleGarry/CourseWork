@@ -17,9 +17,11 @@ public class Employee {
     public String getFullName() {
         return fullName;
     }
+
     public int getDepartment() {
         return department;
     }
+
     public void setDepartment(int department) {
         this.department = department;
     }
@@ -27,6 +29,7 @@ public class Employee {
     public int getSalary() {
         return salary;
     }
+
     public void setSalary(int salary) {
         this.salary = salary;
     }
@@ -37,7 +40,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Сотрудник - ID:" +getId()+ " ФИО:" + getFullName() +
+        return "Сотрудник - ID:" + getId() + " ФИО:" + getFullName() +
                 ", отдел: " + getDepartment() + ", зарплата: " + getSalary();
     }
 }

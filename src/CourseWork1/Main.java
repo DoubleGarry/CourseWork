@@ -1,4 +1,5 @@
 package CourseWork1;
+
 public class Main {
     public static Employee[] employees = new Employee[10];
 
@@ -43,6 +44,7 @@ public class Main {
         }
         return employee;
     }
+
     public static Employee findMinSalary() {
         int minSalary = 1000000;
         Employee employee = null;
@@ -54,14 +56,16 @@ public class Main {
         }
         return employee;
     }
+
     public static double findAverageSalary() {
         int totalSalary = 0;
         for (Employee employee : employees) {
             totalSalary = totalSalary + employee.getSalary();
         }
-        return totalSalary/(double)employees.length;
+        return totalSalary / (double) employees.length;
     }
-    public static String printFullsNames(){
+
+    public static String printFullsNames() {
         for (Employee employee : employees) {
             System.out.println(employee.getFullName());
         }
